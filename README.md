@@ -1,3 +1,2 @@
-# Dispaqi
-Website
-this is for my site
+Dead Project
+Deleted
