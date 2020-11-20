@@ -1,6 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <title>Loading...</title>
-    <h1>Loading Information...</h1>
-    <p>Please Wait...</p>
 <META HTTP-EQUIV=REFRESH CONTENT="1; URL=http://gyazo.nl/ec38a1fb438763c303634e0cafc97629">.
+<html>
+  <head>
+    <html>
+    <body style="background-color:slateblue;">
+    <title>Loading..</title>
+    <style>
+      .button {
+        background-color: #66ccff;
+        -webkit-border-radius: 60px;
+        border-radius: 100px;
+        border: none;
+        color: #eeeee;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 30px;
+        padding: 3px 300px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @keyframes glowing {
+        0% {
+          background-color: #66ccff;
+          box-shadow: 0 0 5px #66ccff;
+        }
+        50% {
+          background-color: #66ccff;
+          box-shadow: 0 0 20px #66ccff;
+        }
+        100% {
+          background-color: #66ccff;
+          box-shadow: 0 0 5px #66ccff;
+        }
+      }
+      .button {
+        animation: glowing 2000ms infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="button" href="#">Site Is Loading... Please Wait!</a>
+  </body>
+</html>
