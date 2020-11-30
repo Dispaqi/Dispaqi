@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type="ed7ed5f8d036ea29a0c25844-text/javascript"> (function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.15.1/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="/assets/logo.png" type="image/png" sizes="16x16">
+<meta name="google-site-verification" content="uePMrdQ182V08YTphVyWufURF4YoECJZQ59XTNbxIb0" />
+
+<title>Exodus - Sign up</title>
+<meta name="title" content="Exodus - Sign up">
+<meta name="description" content="Next-generation AntiCheat systems to efficiently remove Minecraft cheaters">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://exo.ac/">
+<meta property="og:title" content="Exodus - Sign up">
+<meta property="og:description" content="Next-generation AntiCheat systems to efficiently remove Minecraft cheaters">
+<meta property="og:image" content="https://exo.ac/assets/logo-sm.png">
+<meta name="theme-color" content="#3399CC">
+
+<meta property="twitter:card" content="summary">
+<meta property="twitter:url" content="https://exo.ac/">
+<meta property="twitter:title" content="Exodus - Sign up">
+<meta property="twitter:description" content="Next-generation AntiCheat systems to efficiently remove Minecraft cheaters">
+<meta property="twitter:image" content="https://exo.ac/assets/logo-sm.png">
+<link rel="stylesheet" href="/assets/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/_landing.css?v=15">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js" type="ed7ed5f8d036ea29a0c25844-text/javascript"></script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer type="ed7ed5f8d036ea29a0c25844-text/javascript"></script>
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height:90vh;">
+<div id="particles-js" style="position:absolute;top:0;left:0;z-index:-9999;height:100%;width:100%;overflow:hidden;"></div>
+<div class="d-flex account-pages my-5 pt-sm-5 align-items-center" style="width:100%;height:100%;">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-8 col-lg-6 col-xl-5">
+<div class="card overflow-hidden">
+<div class="card-body pt-0">
+<div class="text-center mt-4">
+<a href="/" class="logo"><img src="/assets/logo-sm.png" alt="logo" height="64"></a>
+</div>
+<div class="p-3">
+<div style="border-bottom: 1px solid #282828;">
+<h4 class="text-muted font-size-18 mb-1 text-center">Exodus</h4>
+<p class="text-muted text-center">Sign up to continue to the dashboard</p>
+</div>
+<div class="form-horizontal mt-4">
+<div class="form-group">
+<label for="username" class="text-muted">Username</label>
+<input type="text" class="form-control" id="username" placeholder="Enter username" autocomplete="off">
+</div>
+ <div class="form-group">
+<label for="password" class="text-muted">Password</label>
+<input type="password" class="form-control" id="password" placeholder="Enter password" autocomplete="off">
+</div>
+<div class="form-group">
+<label for="confirmPassword" class="text-muted">Confirm Password</label>
+<input type="password" class="form-control" id="confirmPassword" placeholder="Enter password" autocomplete="off">
+</div>
+<div class="form-group">
+<label for="email" class="text-muted">Email</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email" autocomplete="off">
+</div>
+<div class="form-group row mt-4 align-items-center">
+
+<div class="col-12 text-center">
+<button class="g-recaptcha btn btn-outline-primary btn-sm" data-sitekey="6LcxMeMZAAAAAAJXynla3XRdppgPxPn8eSFaP0kQ" data-callback="captchacallback" data-theme="dark"><i class="fas fa-lock-open"></i>&emsp;Sign up</button>
+</div>
+</div>
+<div class="form-group mb-0 row">
+<div class="col-12 d-flex justify-content-center align-items-center">
+<span class="text-muted">Already have an account? <a href="/auth" class="text-primary">Sign in</a></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="/assets/signup.js?v=76" type="ed7ed5f8d036ea29a0c25844-text/javascript"></script>
+<script type="ed7ed5f8d036ea29a0c25844-text/javascript">
+        const showToast = (text, icon) => {
+            Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+                onOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            }).fire({
+                icon: icon != undefined ? icon : "success",
+                title: text != undefined ? text : "Thanks"
+            });
+        }
+        const passwords = {
+            main:       document.getElementById("password"),
+            confirm:    document.getElementById("confirmPassword")
+        }
+        function captchacallback(token) {
+            if(passwords.main.value != passwords.confirm.value) {
+                passwords.main.classList.add('passerror');
+                passwords.confirm.classList.add('passerror');
+
+                setTimeout(()=> {
+                    passwords.main.classList.remove('passerror');
+                    passwords.confirm.classList.remove('passerror');
+                }, 2*1000)
+                return showToast("Passwords doesn't match", "error");
+            }
+
+
+            toastLogin('username', 'password', 'email', token, '/error?id=404');
+            grecaptcha.reset();
+        }
+
+        let errorcallback = (e) => {
+            // Not really used but ok
+            console.log(e);
+            showToast("Invalid Captcha", "error");
+            setTimeout(() => {
+                grecaptcha.reset();
+                grecaptcha.execute();
+            }, 2 * 1000);
+        }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" type="ed7ed5f8d036ea29a0c25844-text/javascript"></script>
+<script type="ed7ed5f8d036ea29a0c25844-text/javascript">
+       particlesJS("particles-js", {
+          particles: {
+             number: { value: 10, density: { enable: true, value_area: 800 } },
+             color: { value: "#fff" },
+             shape: {
+                type: "circle",
+                stroke: { width: 0, color: "#000000" },
+                polygon: { nb_sides: 5 },
+                image: { src: "/assets/logo-sm.png", width: 30, height: 30 }
+             },
+             opacity: {
+                value: 0.7260172626387177,
+                random: true,
+                anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+             },
+             size: {
+                value: 4,
+                random: true,
+                anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+             },
+             line_linked: {
+                enable: false,
+                distance: 500,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 2
+             },
+             move: {
+                enable: true,
+                speed: 4.810221721157459,
+                direction: "bottom-left",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                enable: false,
+                rotateX: 481.02217211574595,
+                rotateY: 1523.236878366529
+                }
+             }
+          },
+          interactivity: {
+             detect_on: "canvas",
+             events: {
+                onhover: { enable: true, mode: "bubble" },
+                onclick: { enable: true, mode: "repulse" },
+                resize: true
+             },
+             modes: {
+                grab: { distance: 383.61638361638364, line_linked: { opacity: 0.5 } },
+                bubble: {
+                distance: 467.53246753246754,
+                size: 3.996003996003996,
+                duration: 0.3196803196803197,
+                opacity: 1,
+                speed: 3
+                },
+                repulse: { distance: 200, duration: 0.4 },
+                push: { particles_nb: 4 },
+                remove: { particles_nb: 2 }
+             }
+          },
+          retina_detect: true
+          });
+    </script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="ed7ed5f8d036ea29a0c25844-|49" defer=""></script></body>
+</html>
