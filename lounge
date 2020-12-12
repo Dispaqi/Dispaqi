@@ -1,1 +1,22 @@
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
+<a href="https://www.dispaqi.com/ips">IP Cache</a>
+<style>
+a {
+  color: red;
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
+/* Non-Demo Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+</style>
